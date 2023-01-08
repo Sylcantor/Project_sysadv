@@ -1,0 +1,14 @@
+Density : 0.0004149139522975779 of graph G_er_big 
+Number of nodes : 105722 of graph G_er_big 
+Number of edges : 2318754 of graph G_er_big 
+Average degree : 43.86511795085224 of graph G_er_big 
+Number of nodes : 105722 of graph G_random_big 
+Number of edges : 2318886 of graph G_random_big 
+Density : 0.00041493757215621893 of graph G_random_big 
+Average degree : 43.86761506592762 of graph G_random_big 
+Number of triangles in graph G_random_big : 41967 
+Local clustering coefficient in graph G_random_big : 0.0004130302970763487 
+Number of triangles in graph G_er_big : 42102 
+Local clustering coefficient in graph G_er_big : 0.0004138885289040288 
+Global clustering coefficient in graph G_random_big : 0.0004125960571047808 
+Global clustering coefficient in graph G_er_big : 0.0004138903618764489 

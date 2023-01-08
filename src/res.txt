@@ -1,0 +1,106 @@
+TP 1
+
+Question 3 :
+Small Graphe:
+
+Sommets : 4941 contre 4941 dans les données originales
+Arretes : 6594 contre 6594 dans les données originales
+(Graphe inchangé)
+
+Large Graphe:
+
+Sommets : 105 722 contre 105 938 dans les données originales
+Arretes : 2 316 668 contre 2 316 948 dans les données originales
+(Différence de 216 Sommets et 280 Arretes)
+
+
+Question 4 :
+
+Small Graphe:
+Densité : 0.0005403026973346214
+Degré moyen: 2.66909532483303
+
+Large Graphe:
+Densité : 0.00041454068695572074
+Degré moyen: 43.82565596564575
+
+Question 5 :
+
+Small Graphe:
+Distance moyenne entre deux sommets : 18.989185424445708
+
+Large Graphe:
+Distance moyenne entre deux sommets : 4.33771
+
+Question 6 :
+
+Small Graphe:
+Diamètre : 46
+
+Large Graphe:
+Diamètre : 9
+
+Question 7 :
+
+Voir docs
+
+Question 8 :
+
+Small Graphe:
+Triangles : 1953
+Global Clustering Coefficient : 0.10315322452860086
+Local Clustering Coefficient : 0.08010361108159711
+
+
+Question 10 :
+Small Erdos-Renyi Graphe:
+Q3:
+Sommets : 4520
+Arretes : 6547
+
+Q4:
+Densité : 0.0006410494921149052
+Degré moyen: 2.8969026548672567
+
+Q5:
+Distance moyenne entre deux sommets : 8.511283234798206
+
+Q6:
+Diamètre : 20
+
+Q7:
+Voir docs
+
+Q8:
+Triangles : 9
+Global Clustering Coefficient : 0.0005158479967902792
+Local Clustering Coefficient : 0.00043141592920353984
+
+Large Erdos-Renyi Graphe:
+//todo
+
+Small random Graphe:
+Q3:
+Sommets : 4533
+Arretes : 6671
+
+Q4:
+Densité : 0.0006494493942528742
+Degré moyen: 2.943304654754026
+
+Q5:
+Distance moyenne entre deux sommets : 8.297107667241251
+
+Q6:
+Diamètre : 19
+
+Q7:
+Voir docs
+
+Q8:
+Triangles : 9
+Global Clustering Coefficient : 0.0004873294346978557
+Local Clustering Coefficient : 0.0008015295242297227
+
+Large random Graphe:
+//todo
