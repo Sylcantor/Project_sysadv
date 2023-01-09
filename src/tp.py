@@ -23,7 +23,6 @@ def print_graph_info(G,name):
 def print_density(G,name):
     density = nx.density(G)
     print("Density : ", density, " of graph ", name)
-    
     file = open("graph_info.txt", "a")
     file.write("Density : " + str(density) + " of graph " + name + " \n")
     file.close()
@@ -74,10 +73,11 @@ def write_graph_to_file(G, path):
 #function who print the number total of triangles in a graph
 def print_number_of_triangles(G,name):
     triangles = nx.triangles(G)
-    triangles = sum(triangles.values())
-    print("Number of triangles in graph ", name, " : ")
+    triangles = sum(triangles.values()) / 3
+    print("Number of triangles in graph ", name, " : " + str(triangles))
     file = open("graph_info.txt", "a")
     file.write("Number of triangles in graph " + name + " : " + str(triangles) + " \n")
+    file.close()
 
 #function who print the global clustering coefficient of a graph
 def print_global_clustering_coefficient(G,name):
@@ -111,7 +111,6 @@ def generate_random_graph(G):
     m = G.number_of_edges()
     p = 2 * m / (n * (n - 1))
     rg = nx.gnp_random_graph(n, p)
-
     return rg
 
 def plot_distribution_degre_log(G):
@@ -157,36 +156,25 @@ def plot_distribution_degre_lin(G):
     plt.ylabel('Nombre de noeuds')
     plt.show()
 
-def generate_and_write_big_graph_erdos_renyi(G_big):
-    print("start p1")
-    er_big = get_erdos_renyi_graph(G_big)
-    er_big = get_largest_connected_component(er_big)
-    write_graph_to_file(er_big, '/home/guiblin/repos/Project_sysadv/data/out.erdos-renyi-big.txt')
-    print("done 1")
-
-def generate_and_write_big_graph_random(G_big):
-    print("start p2")
-    random_big = generate_random_graph(G_big)
-    random_big = get_largest_connected_component(random_big)
-    write_graph_to_file(random_big, '/home/guiblin/repos/Project_sysadv/data/out.random-big.txt')
-    print("done 2")
 
 #function main
 def main():
+    #DO YOUR STUFF HERE
 
     #G_small = nx.read_edgelist('/home/guiblin/repos/Project_sysadv/data/out.opsahl-powergrid_filtered-largest.txt',create_using=nx.Graph,delimiter=" ",nodetype=int)
     #G_big = nx.read_edgelist('/home/guiblin/repos/Project_sysadv/data/out.flickrEdges_filtered-largest.txt',create_using=nx.Graph,delimiter=" ",nodetype=int)
     #G_er_small = nx.read_edgelist('/home/guiblin/repos/Project_sysadv/data/out.erdos-renyi-small.txt',create_using=nx.Graph,delimiter=" ",nodetype=int)
     #G_random_small = nx.read_edgelist('/home/guiblin/repos/Project_sysadv/data/out.random-small.txt',create_using=nx.Graph,delimiter=" ",nodetype=int)
+    #G_er_big = nx.read_edgelist('/home/guiblin/repos/Project_sysadv/data/out.erdos-renyi-big.txt',create_using=nx.Graph,delimiter=" ",nodetype=int)
+    #G_random_big = nx.read_edgelist('/home/guiblin/repos/Project_sysadv/data/out.random-big.txt',create_using=nx.Graph,delimiter=" ",nodetype=int)
+    
 
-    #do all function for G_er_small
-
-    G_big = nx.read_edgelist('/home/guiblin/repos/Project_sysadv/data/out.flickrEdges_filtered-largest.txt',create_using=nx.Graph,delimiter=" ",nodetype=int)
-
-    #plot_distribution_degre_lin(G_random_small)
-    #plot_distribution_degre_log(G_random_small)
+    #plot_distribution_degre_log(G_random_big)
+    #plot_distribution_degre_lin(G_random_big)
 
 
+    #SOME MULTIPROCESS STUFF :
+    '''
     print("start process")
     p1 = mp.Process(target=generate_and_write_big_graph_erdos_renyi, args=(G_big,))
     p1.start()
@@ -239,16 +227,6 @@ def main():
     for p in proccesses2:
         p.join()
     
-
-    '''
-    print_graph_info(G_random_small,"G_random_small")
-    print_density(G_random_small,"G_random_small")
-    print_average_degree(G_random_small,"G_random_small")
-    print_average_distance(G_random_small,"G_random_small")
-    print_diameter(G_random_small,"G_random_small")
-    print_number_of_triangles(G_random_small,"G_random_small")
-    print_global_clustering_coefficient(G_random_small,"G_random_small")
-    print_local_clustering_coefficient(G_random_small,"G_random_small")
     '''
 
 #Call main
